@@ -1,0 +1,37 @@
+{% extends 'base.html'%}
+{% block title %}
+Projeto WebTheater
+{% endblock %}
+
+{% block content %}
+    {% for categoria in categoria_list %}
+        <main class="main">
+            <ul class="posts">
+                <li class="post">
+                    <div class="infoUserPost">
+                       
+                        <div class="nameAndHour">
+                            <strong>{{categoria.get_id()}} - {{categoria.get_titulo()}}</strong>
+                        </div>
+                    </div>
+                    <p>
+                        {{categoria.get_descricao()}}
+                    </p>
+                    <ul>
+                        {% for video in categoria.get_videos_lista() %}
+                            
+                                <div>
+                                    <img class="imgCategoria" src="{{url_for('static', filename=video.get_imagem())}}">
+                                    <h5>{{video.get_titulo()}}</h5>
+                                    
+                                    <a href="{{ url_for('video', titulo=video.get_titulo())}}">assistir</a>
+                                    <br>
+                                </div>
+                                <br>
+                        {% endfor %}
+                    </ul>
+                </li>
+            </ul>
+        </main>
+    {% endfor %}
+{% endblock %}

@@ -73,3 +73,37 @@ fieldset.grupo .campo {
     margin-right: 1em;
 }
 
+li{
+    list-style: none;
+}
+
+
+div.newPost{
+    width: 93%;
+    height: 240px;
+
+    display: flex;
+    flex-direction: line;
+    align-items: flex-start;
+    margin: 50px 0;
+    padding: 25px;
+
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 0 3px rgba(0,0,0,0.2);
+}
+
+div.newPost div.infoUser{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.newPost div.infoUser div.imgUser{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+
+    background: #333;
+}
+

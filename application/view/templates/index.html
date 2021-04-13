@@ -23,8 +23,9 @@ Projeto WebTheater
                                 <div>
                                     <img class="imgCategoria" src="{{url_for('static', filename=video.get_imagem())}}">
                                     <h5>{{video.get_titulo()}}</h5>
+                                    <br>
                                     
-                                    <a href="{{ url_for('video', titulo=video.get_titulo())}}">assistir</a>
+                                    <a href="{{ url_for('video', titulo=video.get_titulo())}}"><button>visualizar</button></a>
                                     <br>
                                 </div>
                                 <br>

@@ -31,6 +31,3 @@ class Categoria():
      
     def set_id(self, id: int):
         self.__id = id
-
-    def set_titulo(self, titulo: str) -> None:
-        self.__titulo = titulo
